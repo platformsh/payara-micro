@@ -17,7 +17,7 @@ hooks:
        wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
        mv jq-linux64 jq
        chmod +x jq
-       mvn -DskipTests clean package payara-micro:bundle
+       mvn clean package payara-micro:bundle
 
 # The relationships of the application with services or other applications.
 #
