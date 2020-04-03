@@ -1,5 +1,4 @@
-
-# Payara with JPA
+# Payara with NoSQL
 
 ![Hello World Platform.sh and Payara](https://pbs.twimg.com/media/ES1yxFiWoAQnjIg?format=jpg&name=small)
 
