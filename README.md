@@ -27,7 +27,7 @@ This repository has three Payara and Platform.sh samples:
 
 ## Reference
 
-[Get your free -ebook](https://www.payara.fish/page/payara-platform-and-paas-with-platform-sh/)
+[Get your free e-book](https://www.payara.fish/page/payara-platform-and-paas-with-platform-sh/)
 
 
 
