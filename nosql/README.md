@@ -2,14 +2,10 @@
 
 ![Hello World Platform.sh and Payara](https://pbs.twimg.com/media/ES1yxFiWoAQnjIg?format=jpg&name=small)
 
-After creating the first plain hello world with Payara Micro and Platform.sh, it’s time to create the first application connected with a SQL database. Payara has support for Jakarta technologies that includes JPA, [Jakarta Persistence API](https://projects.eclipse.org/projects/ee4j.jpa).
 
-[Jakarta Persistence](https://jakarta.ee/specifications/persistence/) defines a standard for management of persistence and object/relational mapping in Java(R) environments.
-
-On this point, we'll create a REST application this time connect to a relational database; we have support to [MySQL, Maria](https://docs.platform.sh/configuration/services/mysql.html) and [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html), but on this application we'll use [PostgreSQL](https://docs.platform.sh/configuration/services/postgresql.html).
-
-
-
+The NoSQL DB is a database that provides a mechanism for storage and retrieval of data, which is modeled by means other than the tabular relations used in relational databases. These databases have speed and high scalability. This kind of database is becoming more popular in several applications, which include financial ones. As a result of the increase, the number of users and vendors is increasing too. In the Jakarta EE world, there is the [Jakarta NoSQL](https://projects.eclipse.org/projects/ee4j.nosql).
+  
+We'll create a similar rest application, but using [MongoDB](https://docs.platform.sh/configuration/services/mongodb.html) instead of relational database.
 
 
 ## Using Docker
