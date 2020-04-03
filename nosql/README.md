@@ -27,3 +27,16 @@ We'll create a similar rest application, but using [MongoDB](https://docs.platfo
 mvn clean package payara-micro:bundle
 java -jar -Xmx512m target/microprofile-microbundle.jar 
 ```
+
+## Execute
+
+```shell 
+curl --location --request POST 'http://localhost:8080/fishes' \
+--header 'Content-Type: application/json' \
+--header 'Content-Type: application/javascript' \
+--data-raw '{"name": "payara"}'
+```
+
+```shell
+curl --location --request GET 'http://localhost:8080/fishes'
+```
