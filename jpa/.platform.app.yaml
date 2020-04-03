@@ -8,16 +8,11 @@ name: app
 
 # The runtime the application uses.
 type: "java:8"
-
 disk: 1024
 
 # The hooks executed at various points in the lifecycle of the application.
 hooks:
-    build:  |
-       wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-       mv jq-linux64 jq
-       chmod +x jq
-       mvn clean package payara-micro:bundle
+    build: mvn clean package payara-micro:bundle
 
 # The relationships of the application with services or other applications.
 #
@@ -31,10 +26,10 @@ relationships:
 web:
     commands:
         start: |
-          export HOST=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|./jq -r ".database[0].host"`
-          export PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|./jq -r ".database[0].password"`
-          export USER=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|./jq -r ".database[0].username"`
-          export DATABASE=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|./jq -r ".database[0].path"`
+          export HOST=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].host"`
+          export PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].password"`
+          export USER=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].username"`
+          export DATABASE=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].path"`
           java -jar -Xmx512m  \
           -Dserver.host=$HOST \
           -Dserver.database=$DATABASE \
