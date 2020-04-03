@@ -1,5 +1,7 @@
 # Hello World with Payara Micro and Platform.sh
 
+![Hello World Platform.sh and Payara](https://pbs.twimg.com/media/ES1yxFiWoAQnjIg?format=jpg&name=small)
+
 In this section we will cover how to create your first REST project with Payara Micro, and then move that project to Platform.sh  using the Maven Archetype, which  is a Maven project templating toolkit. An archetype is defined as an original pattern or model from which all other things of the same kind are made. 
 
 ```shell
