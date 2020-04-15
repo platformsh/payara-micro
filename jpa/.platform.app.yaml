@@ -30,7 +30,7 @@ web:
           export PASSWORD=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].password"`
           export USER=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].username"`
           export DATABASE=`echo $PLATFORM_RELATIONSHIPS|base64 -d|json_pp|jq -r ".database[0].path"`
-          java -jar -Xmx512m  \
+          java -jar -Xmx$(jq .info.limits.memory /run/config.json)m -XX:+ExitOnOutOfMemoryError \
           -Dserver.host=$HOST \
           -Dserver.database=$DATABASE \
           -Dserver.user=$USER \
