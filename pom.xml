@@ -11,5 +11,6 @@
       <module>hello</module>
       <module>jpa</module>
       <module>nosql</module>
+      <module>search</module>
   </modules>
 </project>
